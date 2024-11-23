@@ -1,3 +1,8 @@
+Here’s an updated version of the code with the layout split further into individual sections for better structure. Each section contains an image and its associated information card styled separately.
+
+### Code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,45 +24,42 @@
             padding: 20px;
         }
 
-        .card {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .info-card {
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            margin-bottom: 20px;
             padding: 20px;
+            margin-bottom: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
+        .info-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .card img {
-            max-width: 300px;
-            border-radius: 10px;
-        }
-
-        .card-content {
-            max-width: 600px;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .card:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .card-content h3 {
+        .info-card h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #444;
         }
 
-        .card-content p {
+        .info-card p {
             line-height: 1.6;
         }
 
@@ -74,18 +76,6 @@
 
         .button:hover {
             background-color: #0056b3;
-        }
-
-        .light-green {
-            background-color: #e3f9e5;
-        }
-
-        .light-orange {
-            background-color: #fff3e6;
-        }
-
-        .light-blue {
-            background-color: #e6f7ff;
         }
 
         .quote-section {
@@ -130,20 +120,25 @@
 </head>
 <body>
     <div class="container">
+
         <!-- Section 1 -->
-        <div class="card light-green">
-            <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/skull-2028555_1280.jpg" alt="Memento Mori Art">
-            <div class="card-content">
+        <div class="section">
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2019/02/21/11/47/skull-4015776_1280.jpg" alt="Memento Mori Art">
+            </div>
+            <div class="info-card">
                 <h3>Memento Mori</h3>
                 <p>"Memento Mori" is a Latin phrase meaning "Remember you must die." This concept has been depicted in art to remind viewers of the inevitability of death, encouraging them to reflect on the transient nature of life.</p>
                 <a href="#" class="button">Click Here</a>
             </div>
         </div>
-        
+
         <!-- Section 2 -->
-        <div class="card light-orange">
-            <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/skull-2028555_1280.jpg" alt="Amor Fati Wallpaper">
-            <div class="card-content">
+        <div class="section">
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2020/05/18/08/16/forest-5184513_1280.jpg" alt="Amor Fati Wallpaper">
+            </div>
+            <div class="info-card">
                 <h3>Amor Fati</h3>
                 <p>"Amor Fati" translates to "Love of Fate." It embodies an attitude of embracing everything that happens in life, including suffering and loss, as necessary and beneficial.</p>
                 <a href="#" class="button">Click Here</a>
@@ -151,9 +146,11 @@
         </div>
 
         <!-- Section 3 -->
-        <div class="card light-blue">
-            <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/skull-2028555_1280.jpg" alt="Vanitas Still Life">
-            <div class="card-content">
+        <div class="section">
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2017/08/06/07/05/skull-2592282_1280.jpg" alt="Vanitas Still Life">
+            </div>
+            <div class="info-card">
                 <h3>Memento Mori in Art</h3>
                 <p>Vanitas still life paintings often include symbols like skulls, hourglasses, and wilting flowers to represent the fleeting nature of life and the certainty of death.</p>
                 <a href="#" class="button">Click Here</a>
@@ -177,10 +174,32 @@
         </div>
 
         <!-- Section 4 -->
-        <div class="card light-green">
-            <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/skull-2028555_1280.jpg" alt="Amor Fati Design">
-            <div class="card-content">
+        <div class="section">
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2019/07/02/10/43/fate-4312214_1280.jpg" alt="Amor Fati Design">
+            </div>
+            <div class="info-card">
                 <h3>Embracing Amor Fati</h3>
-                <p>The philosophy of Amor Fati encourages individuals to not only accept but love their fate, finding meaning
-::contentReference[oaicite:0]{index=0}
- 
+                <p>The philosophy of Amor Fati encourages individuals to not only accept but love their fate, finding meaning and growth in all experiences, whether joyful or challenging.</p>
+                <a href="#" class="button">Click Here</a>
+            </div>
+        </div>
+
+        <!-- Social Share Section -->
+        <div class="social-buttons">
+            <a href="#">Share on Facebook</a>
+            <a href="#">Share on Twitter</a>
+            <a href="#">Share on LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+### Key Changes:
+1. Each section now has a distinct `section` block.
+2. Images are enclosed in a `div` with the `image` class for individual styling.
+3. The associated content card is in a `div` with the `info-card` class.
+4. Layout is consistent but modular, making each section independent and cleanly split.
+
+You can test this code in any browser after saving it as an `.html` file.
