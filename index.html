@@ -1,192 +1,138 @@
-Here’s an updated version of the code with the layout split further into individual sections for better structure. Each section contains an image and its associated information card styled separately.
-
-### Code:
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memento Mori & Amor Fati</title>
+    <title>Philosophical Concepts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            color: #333;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .card {
+            background: #fff;
+            margin: 20px 0;
             padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .image {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .image img {
+        .card img {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
-        .info-card {
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .card h2 {
+            margin-top: 0;
         }
 
-        .info-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .info-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #444;
-        }
-
-        .info-card p {
+        .card p {
+            font-size: 1em;
             line-height: 1.6;
         }
 
-        .button {
+        .card a {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
         }
 
-        .button:hover {
-            background-color: #0056b3;
+        .card a:hover {
+            background: #555;
         }
 
-        .quote-section {
-            text-align: center;
-            padding: 20px;
-            margin: 20px 0;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-        }
-
-        .quote-section blockquote {
-            font-size: 20px;
+        blockquote {
             font-style: italic;
             color: #555;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #fff;
+            border-left: 10px solid #333;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
         }
 
-        .quote-section cite {
-            font-size: 16px;
-            color: #888;
-            display: block;
-            margin-top: 10px;
+        blockquote img {
+            max-width: 50px;
+            margin-right: 10px;
+            border-radius: 5px;
         }
 
-        .social-buttons {
+        .share-buttons {
             text-align: center;
             margin: 20px 0;
         }
 
-        .social-buttons a {
+        .share-buttons a {
             display: inline-block;
             margin: 0 10px;
-            font-size: 18px;
-            color: #007bff;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
             text-decoration: none;
-            transition: color 0.3s;
+            border-radius: 5px;
         }
 
-        .social-buttons a:hover {
-            color: #0056b3;
+        .share-buttons a:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
     <div class="container">
-
-        <!-- Section 1 -->
-        <div class="section">
-            <div class="image">
-                <img src="https://cdn.pixabay.com/photo/2019/02/21/11/47/skull-4015776_1280.jpg" alt="Memento Mori Art">
-            </div>
-            <div class="info-card">
-                <h3>Memento Mori</h3>
-                <p>"Memento Mori" is a Latin phrase meaning "Remember you must die." This concept has been depicted in art to remind viewers of the inevitability of death, encouraging them to reflect on the transient nature of life.</p>
-                <a href="#" class="button">Click Here</a>
-            </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Vanitas_Still_Life_with_Skull_by_Pieter_Claesz.jpg" alt="Memento Mori Art">
+            <h2>Memento Mori</h2>
+            <p>"Memento Mori" is a Latin phrase meaning "Remember you must die." This concept has been depicted in art to remind viewers of the inevitability of death, encouraging them to reflect on the transient nature of life.</p>
+            <a href="#">Click Here</a>
         </div>
-
-        <!-- Section 2 -->
-        <div class="section">
-            <div class="image">
-                <img src="https://cdn.pixabay.com/photo/2020/05/18/08/16/forest-5184513_1280.jpg" alt="Amor Fati Wallpaper">
-            </div>
-            <div class="info-card">
-                <h3>Amor Fati</h3>
-                <p>"Amor Fati" translates to "Love of Fate." It embodies an attitude of embracing everything that happens in life, including suffering and loss, as necessary and beneficial.</p>
-                <a href="#" class="button">Click Here</a>
-            </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Amor_Fati.jpg" alt="Amor Fati Art">
+            <h2>Amor Fati</h2>
+            <p>"Amor Fati" translates to "Love of Fate." It embodies an attitude of embracing everything that happens in life, including suffering and loss, as necessary and beneficial.</p>
+            <a href="#">Click Here</a>
         </div>
-
-        <!-- Section 3 -->
-        <div class="section">
-            <div class="image">
-                <img src="https://cdn.pixabay.com/photo/2017/08/06/07/05/skull-2592282_1280.jpg" alt="Vanitas Still Life">
-            </div>
-            <div class="info-card">
-                <h3>Memento Mori in Art</h3>
-                <p>Vanitas still life paintings often include symbols like skulls, hourglasses, and wilting flowers to represent the fleeting nature of life and the certainty of death.</p>
-                <a href="#" class="button">Click Here</a>
-            </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Vanitas_Still_Life_with_Skull_by_Pieter_Claesz.jpg" alt="Vanitas Still Life">
+            <h2>Memento Mori in Art</h2>
+            <p>Vanitas still life paintings often include symbols like skulls, hourglasses, and wilting flowers to represent the fleeting nature of life and the certainty of death.</p>
+            <a href="#">Click Here</a>
         </div>
-
-        <!-- Wisdom Quotes Section -->
-        <div class="quote-section">
-            <blockquote>"Do not fear death so much, but rather the inadequate life."</blockquote>
-            <cite>— Bertolt Brecht</cite>
+        <blockquote>
+            <img src="https://www.azquotes.com/picture-quotes/quote-do-not-fear-death-so-much-but-rather-the-inadequate-life-bertolt-brecht-61-92-94.jpg" alt="Bertolt Brecht Quote">
+            "Do not fear death so much, but rather the inadequate life." — Bertolt Brecht
+        </blockquote>
+        <blockquote>
+            <img src="https://www.azquotes.com/picture-quotes/quote-that-which-does-not-kill-us-makes-us-stronger-friedrich-nietzsche-61-92-94.jpg" alt="Friedrich Nietzsche Quote">
+            "That which does not kill us makes us stronger." — Friedrich Nietzsche
+        </blockquote>
+        <blockquote>
+            <img src="https://www.azquotes.com/picture-quotes/quote-you-have-power-over-your-mind-not-outside-events-realize-this-and-you-will-find-strength-marcus-aurelius-61-92-94.jpg" alt="Marcus Aurelius Quote">
+            "You have power over your mind - not outside events. Realize this, and you will find strength." — Marcus Aurelius
+        </blockquote>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Amor_Fati.jpg" alt="Embracing Amor Fati">
+            <h2>Embracing Amor Fati</h2>
+            <p>The philosophy of Amor Fati encourages individuals to not only accept but love their fate, finding meaning and growth in all experiences, whether joyful or challenging.</p>
+            <a href="#">Click Here</a>
         </div>
-        
-        <div class="quote-section">
-            <blockquote>"That which does not kill us makes us stronger."</blockquote>
-            <cite>— Friedrich Nietzsche</cite>
-        </div>
-
-        <div class="quote-section">
-            <blockquote>"You have power over your mind - not outside events. Realize this, and you will find strength."</blockquote>
-            <cite>— Marcus Aurelius</cite>
-        </div>
-
-        <!-- Section 4 -->
-        <div class="section">
-            <div class="image">
-                <img src="https://cdn.pixabay.com/photo/2019/07/02/10/43/fate-4312214_1280.jpg" alt="Amor Fati Design">
-            </div>
-            <div class="info-card">
-                <h3>Embracing Amor Fati</h3>
-                <p>The philosophy of Amor Fati encourages individuals to not only accept but love their fate, finding meaning and growth in all experiences, whether joyful or challenging.</p>
-                <a href="#" class="button">Click Here</a>
-            </div>
-        </div>
-
-        <!-- Social Share Section -->
-        <div class="social-buttons">
+        <div class="share-buttons">
             <a href="#">Share on Facebook</a>
             <a href="#">Share on Twitter</a>
             <a href="#">Share on LinkedIn</a>
@@ -196,10 +142,4 @@ Here’s an updated version of the code with the layout split further into indiv
 </html>
 ```
 
-### Key Changes:
-1. Each section now has a distinct `section` block.
-2. Images are enclosed in a `div` with the `image` class for individual styling.
-3. The associated content card is in a `div` with the `info-card` class.
-4. Layout is consistent but modular, making each section independent and cleanly split.
-
-You can test this code in any browser after saving it as an `.html` file.
+Feel free to copy and use this code. If you need any more changes or have any other questions, just let me know!
