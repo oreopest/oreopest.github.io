@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memento Mori & Amor Fati</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .card-content {
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .card-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .card-content p {
+            line-height: 1.6;
+        }
+
+        .light-green {
+            background-color: #e3f9e5;
+        }
+
+        .light-orange {
+            background-color: #fff3e6;
+        }
+
+        .light-blue {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card light-green">
+            <img src="https://via.placeholder.com/300?text=Memento+Mori+1" alt="Memento Mori Image 1">
+            <div class="card-content">
+                <h3>Memento Mori</h3>
+                <p>Remember that you must die. This ancient philosophy encourages us to cherish life and make the most of every moment.</p>
+            </div>
+        </div>
+        
+        <div class="card light-orange">
+            <img src="https://via.placeholder.com/300?text=Amor+Fati+1" alt="Amor Fati Image 1">
+            <div class="card-content">
+                <h3>Amor Fati</h3>
+                <p>Love your fate. Embrace the ups and downs of life as part of a greater journey, finding meaning in all experiences.</p>
+            </div>
+        </div>
+
+        <div class="card light-blue">
+            <img src="https://via.placeholder.com/300?text=Memento+Mori+2" alt="Memento Mori Image 2">
+            <div class="card-content">
+                <h3>Memento Mori</h3>
+                <p>The image of a skull reminds us of our mortality. Use this reflection to prioritize what truly matters in life.</p>
+            </div>
+        </div>
+
+        <div class="card light-green">
+            <img src="https://via.placeholder.com/300?text=Amor+Fati+2" alt="Amor Fati Image 2">
+            <div class="card-content">
+                <h3>Amor Fati</h3>
+                <p>Nietzsche’s concept invites us to say yes to life, even when it is difficult, and to grow stronger through adversity.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
